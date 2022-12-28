@@ -17,9 +17,9 @@ should probably proofread and complete it, then remove this comment. -->
 
 This model is a fine-tuned version of [distilbert-base-uncased](https://huggingface.co/distilbert-base-uncased) on an unknown dataset.
 It achieves the following results on the evaluation set:
-- Loss: 0.3680
-- Accuracy: 0.8955
-- F1: 0.8912
+- Loss: 0.2276
+- Accuracy: 0.921
+- F1: 0.9209
 
 ## Model description
 
@@ -39,8 +39,8 @@ More information needed
 
 The following hyperparameters were used during training:
 - learning_rate: 2e-05
-- train_batch_size: 128
-- eval_batch_size: 128
+- train_batch_size: 64
+- eval_batch_size: 64
 - seed: 42
 - optimizer: Adam with betas=(0.9,0.999) and epsilon=1e-08
 - lr_scheduler_type: linear
@@ -50,13 +50,13 @@ The following hyperparameters were used during training:
 
 | Training Loss | Epoch | Step | Validation Loss | Accuracy | F1     |
 |:-------------:|:-----:|:----:|:---------------:|:--------:|:------:|
-| No log        | 1.0   | 125  | 0.5726          | 0.82     | 0.8006 |
-| 0.7809        | 2.0   | 250  | 0.3680          | 0.8955   | 0.8912 |
+| 0.8732        | 1.0   | 250  | 0.3279          | 0.9055   | 0.9037 |
+| 0.259         | 2.0   | 500  | 0.2276          | 0.921    | 0.9209 |
 
 
 ### Framework versions
 
-- Transformers 4.20.1
-- Pytorch 1.11.0
-- Datasets 2.1.0
-- Tokenizers 0.12.1
+- Transformers 4.13.0
+- Pytorch 1.13.0+cu116
+- Datasets 1.16.1
+- Tokenizers 0.10.3
