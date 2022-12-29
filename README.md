@@ -15,15 +15,22 @@ should probably proofread and complete it, then remove this comment. -->
 
 # distilbert-base-uncased-finetuned-emotion
 
-This model is a fine-tuned version of [distilbert-base-uncased](https://huggingface.co/distilbert-base-uncased) on an unknown dataset.
+This model is a fine-tuned version of [distilbert-base-uncased](https://huggingface.co/distilbert-base-uncased) on SetFit/emotion dataset.
 It achieves the following results on the evaluation set:
 - Loss: 0.2276
 - Accuracy: 0.921
 - F1: 0.9209
 
+https://huggingface.co/goldenk/distilbert-base-uncased-finetuned-emotion
+
 ## Model description
 
-More information needed
+This model follows chapter 2 of https://github.com/nlp-with-transformers/notebooks. A few things that were changed from the original notebook:
+
+- the emotion dataset has moved to SetFit/emotion https://github.com/nlp-with-transformers/notebooks/issues/77
+- the new dataset doesn't have ClassLabel feature so needed to change int2str method https://github.com/nlp-with-transformers/notebooks/issues/77
+- made the label names on inference API human-readable with https://discuss.huggingface.co/t/change-label-names-on-inference-api/3063/3
+- function to inspect dataset for existence of certain strings
 
 ## Intended uses & limitations
 
